@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Les Douceurs de Faiza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <h1>Les Douceurs de Faiza</h1>
+        <img src="C:\Users\abdel\OneDrive\Douceurs de Faiza\image0.jpeg" />
+    </header>
+
+    <center><section id="wedding-cakes">
+        <h2>Gâteaux de Mariage</h2>
+        <p>Découvrez nos créations uniques pour rendre votre journée spéciale encore plus mémorable.</p>
+        <img class="enlarge" src="C:\Users\abdel\OneDrive\Douceurs de Faiza\IMG_2798.jpg" />
+        <img class="enlarge" src="C:\Users\abdel\OneDrive\Douceurs de Faiza\IMG_2799.jpg" />
+        <img class="enlarge" src="C:\Users\abdel\OneDrive\Douceurs de Faiza\IMG_2800.jpg" />
+    </section></center>
+
+<center><section id="birthday-cakes">
+        <h2>Gâteaux d'Anniversaire</h2>
+        <p>Célébrez chaque année avec nos délicieux gâteaux d'anniversaire personnalisés.</p>
+        <img class="enlarge" src="C:\Users\abdel\OneDrive\Douceurs de Faiza\IMG_2803.jpg" />
+        <img class="enlarge" src="C:\Users\abdel\OneDrive\Douceurs de Faiza\IMG_2802.jpg" />
+        <img class="enlarge" src="C:\Users\abdel\OneDrive\Douceurs de Faiza\IMG_2801.jpg" />
+    </section></center>
+
+<center><section id="savory-dishes">
+        <h2>Plats Salés</h2>
+        <p>Explorez notre sélection de plats salés exquis, parfaits pour toutes les occasions.</p>
+        <img class="enlarge" src="C:\Users\abdel\OneDrive\Douceurs de Faiza\IMG_2804.jpg" />
+        <img class="enlarge" src="C:\Users\abdel\OneDrive\Douceurs de Faiza\IMG_2806.jpg" />
+        <img class="enlarge" src="C:\Users\abdel\OneDrive\Douceurs de Faiza\IMG_2807.jpg" />
+    </section></center>
+
+<center><section id="CONTACT">
+        <h2>Me contacter</h2>
+        <p>Voici mes réseaux sociaux sur lesquels vous pouvez me contacter.</p>
+        <a href="https://www.instagram.com/lesdouceursdefaiza/">
+            <img src="C:\Users\abdel\OneDrive\Douceurs de Faiza\image.png"  />
+        </a>
+    </section></center>
+
+   
+    <!-- Script pour le lightbox -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const enlargeImages = document.querySelectorAll('.enlarge');
+            const overlay = document.querySelector('.overlay');
+            const lightbox = document.querySelector('.lightbox');
+
+            enlargeImages.forEach(function (element) {
+                element.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const imgSrc = this.getAttribute('src');
+                    const imgAlt = this.getAttribute('alt');
+
+                    lightbox.innerHTML = `<img src="${imgSrc}" alt="${imgAlt}" />`;
+                    overlay.style.display = 'block';
+                    lightbox.style.display = 'block';
+                });
+            });
+
+            overlay.addEventListener('click', function () {
+                overlay.style.display = 'none';
+                lightbox.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
+
